@@ -15,6 +15,8 @@
 - URL: `http://localhost:8080/api/products`
 - Cuerpo de la solicitud (en formato JSON) con todos los campos requeridos.
 - Verifica que la solicitud devuelva un mensaje indicando que el producto se agregó correctamente.
+- Consideraciones de seguridad:
+-- No permite crear productos repetidos por código.
 
 ## Actualizar un producto por ID
 - Método: `PUT`
@@ -41,6 +43,8 @@
 - Método: `POST`
 - URL: `http://localhost:8080/api/carts/:cid/product/:pid` (Reemplaza `:cid` con un ID de carrito y `:pid` con un ID de producto)
 - Verifica que la solicitud agregue el producto al carrito especificado y maneje correctamente la lógica para la cantidad de productos.
+- Consideraciones de seguridad:
+-- No permite agregar productos inexistentes al carrito.
 
 ## Eliminar un carrito por ID
 - Método: `DELETE`
